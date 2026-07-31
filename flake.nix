@@ -37,7 +37,6 @@
               "rust-analyzer"
             ];
           };
-          # Nightly rustfmt for unstable formatting options (imports_granularity, group_imports).
           nightlyRustfmt = pkgs.rust-bin.nightly.latest.rustfmt;
         in
         {
@@ -68,6 +67,8 @@
             shellHook = ''
               # Use nightly rustfmt so unstable options (imports_granularity, group_imports) apply.
               export RUSTFMT="${nightlyRustfmt}/bin/rustfmt"
+              export XDG_DATA_DIRS="${pkgs.gtk4}/share/gsettings-schemas/${pkgs.gtk4.name}:$XDG_DATA_DIRS"
+
               echo "Rust development environment — musicplayer-rs"
               echo "Rust version: $(rustc --version)"
               echo "Cargo version: $(cargo --version)"
