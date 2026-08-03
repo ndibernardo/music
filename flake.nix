@@ -69,7 +69,7 @@
               export RUSTFMT="${nightlyRustfmt}/bin/rustfmt"
               export XDG_DATA_DIRS="${pkgs.gtk4}/share/gsettings-schemas/${pkgs.gtk4.name}:$XDG_DATA_DIRS"
 
-              echo "Rust development environment — musicplayer-rs"
+              echo "Rust development environment - music"
               echo "Rust version: $(rustc --version)"
               echo "Cargo version: $(cargo --version)"
             '';

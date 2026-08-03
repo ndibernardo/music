@@ -7,12 +7,12 @@ fn main() {
 fn run_ui() {
     use std::rc::Rc;
 
-    use musicplayer_rs::library::db::Db;
-    use musicplayer_rs::library::track::Track;
-    use musicplayer_rs::player::PlaybackState;
-    use musicplayer_rs::player::PlayerHandle;
-    use musicplayer_rs::player::rodio::RodioAudioBackend;
-    use musicplayer_rs::ui;
+    use music::library::db::Db;
+    use music::library::track::Track;
+    use music::player::PlaybackState;
+    use music::player::PlayerHandle;
+    use music::player::rodio::RodioAudioBackend;
+    use music::ui;
 
     // Reads RUST_LOG; defaults to no output when unset so users see clean startup.
     tracing_subscriber::fmt::init();
@@ -49,7 +49,7 @@ fn data_dir() -> std::path::PathBuf {
             let home = std::env::var("HOME").expect("HOME or XDG_DATA_HOME must be set");
             std::path::PathBuf::from(home).join(".local/share")
         });
-    let dir = base.join("musicplayer-rs");
+    let dir = base.join("music");
     let _ = std::fs::create_dir_all(&dir);
     dir
 }

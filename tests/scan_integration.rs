@@ -3,22 +3,22 @@
 //! pruning behaviour through `library::scan` and `library::db` alone — no
 //! internal test-only hooks.
 
-use musicplayer_rs::library::db::Db;
-use musicplayer_rs::library::db::LibraryFolder;
-use musicplayer_rs::library::scan::ScannedFile;
-use musicplayer_rs::library::scan::scan_folder;
-use musicplayer_rs::library::track::AlbumTitle;
-use musicplayer_rs::library::track::Artist;
-use musicplayer_rs::library::track::Composer;
-use musicplayer_rs::library::track::DiscNumber;
-use musicplayer_rs::library::track::Genre;
-use musicplayer_rs::library::track::Title;
-use musicplayer_rs::library::track::Track;
-use musicplayer_rs::library::track::TrackDuration;
-use musicplayer_rs::library::track::TrackId;
-use musicplayer_rs::library::track::TrackNumber;
-use musicplayer_rs::library::track::TrackPath;
-use musicplayer_rs::library::track::Year;
+use music::library::db::Db;
+use music::library::db::LibraryFolder;
+use music::library::scan::ScannedFile;
+use music::library::scan::scan_folder;
+use music::library::track::AlbumTitle;
+use music::library::track::Artist;
+use music::library::track::Composer;
+use music::library::track::DiscNumber;
+use music::library::track::Genre;
+use music::library::track::Title;
+use music::library::track::Track;
+use music::library::track::TrackDuration;
+use music::library::track::TrackId;
+use music::library::track::TrackNumber;
+use music::library::track::TrackPath;
+use music::library::track::Year;
 
 fn boc_track(path: &TrackPath) -> ScannedFile {
     ScannedFile {

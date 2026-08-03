@@ -17,7 +17,7 @@ pub fn run(
     queue_rx: async_channel::Receiver<Vec<Track>>,
 ) {
     let app = Application::builder()
-        .application_id("io.github.musicplayer_rs")
+        .application_id("io.github.ndibernardo.music")
         .build();
 
     app.connect_activate(move |app| {
