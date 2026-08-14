@@ -2,6 +2,7 @@
 name    = "music"
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
 
 [features]
 # Enable UI and audio — requires system GTK4 + ALSA (only available inside nix develop)
